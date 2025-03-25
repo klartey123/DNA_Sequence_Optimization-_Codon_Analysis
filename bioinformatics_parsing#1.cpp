@@ -228,6 +228,9 @@ int main(){
     }
 
     basescore(sequence, preferred_codons, use_bonus);
+    if (inFS.is_open()) {
+        inFS.close();
+     }
     return 0;
 }
 
