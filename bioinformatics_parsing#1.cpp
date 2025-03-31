@@ -172,7 +172,9 @@ unordered_map<string, int> codonFrq(const unordered_map<string, string>& sequenc
             codon_scores[codon] = total_score;
         }
     
-        //  using s priority queue as a source to get the biggest score. 
+        //  using s priority queue as a source to get the biggest score.
+
+        // Change this to fit more of what was done in class. For better optimization. 
         priority_queue<pair<int, string>> ranked_codons;
         for (const auto& pair : codon_scores) {
             ranked_codons.push({pair.second, pair.first});
